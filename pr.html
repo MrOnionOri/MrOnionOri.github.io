@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Uso del Módulo PN532 con Raspberry Pi PicoW</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .slide {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .content {
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        p {
+            font-size: 24px;
+            color: #666;
+        }
+        .next-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="content">
+            <h1>Uso del Módulo PN532</h1>
+            <p>con Raspberry Pi PicoW</p>
+            <button class="next-button" onclick="nextSlide()">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content">
+            <h1>Paso 1: Configuración de Hardware</h1>
+            <p>Conecta el módulo PN532 a tu Raspberry Pi PicoW.</p>
+            <p>Asegúrate de tener una conexión adecuada.</p>
+            <button class="next-button" onclick="nextSlide()">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content">
+            <h1>Paso 2: Instalación de Librerías</h1>
+            <p>Instala las librerías necesarias en tu Raspberry Pi PicoW para interactuar con el PN532. Puedes usar pip para instalarlas.</p>
+            <p>Ejemplo: <code>pip install adafruit-circuitpython-pn532</code></p>
+            <button class="next-button" onclick="nextSlide()">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content">
+            <h1>Paso 3: Programación en Python</h1>
+            <p>Escribe un programa en Python para interactuar con el PN532. Puedes utilizar la biblioteca Adafruit CircuitPython PN532.</p>
+            <p>Importa la librería, configura el PN532 y comienza a leer etiquetas NFC.</p>
+            <button class="next-button" onclick="nextSlide()">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="content">
+            <h1>Paso 4: Ejecución</h1>
+            <p>Ejecuta tu programa Python en la Raspberry Pi PicoW.</p>
+            <p>El PN532 debería estar listo para leer etiquetas NFC y procesar la información.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                slides[currentSlide].style.display = 'none';
+                currentSlide++;
+                slides[currentSlide].style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>
